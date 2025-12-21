@@ -230,7 +230,7 @@ Scroll down to find `BetterDiscord → Themes`:
     
     /* Scrollbar/Spacing */
     --scrollbar-padding: 0 6px;
-}```
+```
 
 ---
 
