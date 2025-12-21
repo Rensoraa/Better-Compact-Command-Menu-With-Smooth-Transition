@@ -9,6 +9,7 @@
 
 
 /* Make the entire autocomplete/slash command menu more compact with frosted glass */
+._13533e3c5791980f-autocompleteInner._6b0e07cbaf13ec4e-autocompleteInner, 
 ._13533e3c5791980f-autocomplete.d1405bf11dcfb07a-outerWrapper {
     max-height: 400px !important; /* Shrink max height */
     max-width: 450px !important; /* Shrink width */
@@ -25,12 +26,28 @@
         0 0 0 1px rgba(255, 255, 255, 0.05) !important;
 }
 
+/* Just add 2px spacing between items */
+._13533e3c5791980f-autocompleteRowVertical {
+    margin: 4px 0 !important;
+}
+
+/* Make category headers transparent */
+._14245bb948377a25-wrapper.d1405bf11dcfb07a-categoryHeader {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Make header background transparent */
+._14245bb948377a25-header {
+    background: transparent !important;
+}
+
 /* Smooth hover for items inside your red frosted glass */
 ._13533e3c5791980f-autocompleteRowVertical {
     background: rgba(255, 255, 255, 0.03) !important;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
     border-radius: 4px !important;
-    margin: 1px 0 !important;
     border: 1px solid transparent !important;
 }
 
@@ -49,25 +66,11 @@
     box-shadow: inset 0 0 10px rgba(255, 50, 50, 0.2) !important;
 }
 
-/* Make category headers transparent */
-._14245bb948377a25-wrapper.d1405bf11dcfb07a-categoryHeader {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+._6b0e07cbaf13ec4e-scroller {
+  padding: 0 6px 0 6px !important; /* Adjust as needed */
 }
 
-/* Make header background transparent */
-._14245bb948377a25-header {
-    background: transparent !important;
-}
-
-/* Optional: Make text stand out more */
-._14245bb948377a25-headerLabel {
-    color: rgba(255, 255, 255, 0.9) !important;
-    font-weight: 600 !important;
-}
-
-/* Just add 2px spacing between items */
-._13533e3c5791980f-autocompleteRowVertical {
-    margin: 6px 0 !important;
+/* Make the inner container transparent on hover */
+._13533e3c5791980f-autocompleteRow:hover ._13533e3c5791980f-base {
+  background-color: transparent !important;
 }
