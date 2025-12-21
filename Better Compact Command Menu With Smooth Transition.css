@@ -7,7 +7,6 @@
  * @website https://github.com/acheronx0577
  */
 
-
 /* Make the entire autocomplete/slash command menu more compact with frosted glass */
 ._13533e3c5791980f-autocompleteInner._6b0e07cbaf13ec4e-autocompleteInner, 
 ._13533e3c5791980f-autocomplete.d1405bf11dcfb07a-outerWrapper {
@@ -74,3 +73,4 @@
 ._13533e3c5791980f-autocompleteRow:hover ._13533e3c5791980f-base {
   background-color: transparent !important;
 }
+
