@@ -112,3 +112,8 @@
 ._13533e3c5791980f-autocompleteRow:hover ._13533e3c5791980f-base {
     background-color: transparent !important;
 }
+
+._13533e3c5791980f-autocomplete._6b0e07cbaf13ec4e-autocomplete._6b0e07cbaf13ec4e-autocompleteAttached {
+    max-height: var(--menu-max-height) !important;
+    max-width: var(--menu-max-width) !important;
+}
