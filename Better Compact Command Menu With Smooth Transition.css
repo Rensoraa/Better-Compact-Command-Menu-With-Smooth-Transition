@@ -3,74 +3,112 @@
  * @author AcheronX.
  * @description More Compact and clean look with smooth transition
  * @source https://github.com/acheronx0577/Better-Compact-Command-Menu-With-Smooth-Transition/edit/main/Better%20Compact%20Command%20Menu%20With%20Smooth%20Transition.css
- * @version 0.0.1
+ * @version 0.0.2
  * @website https://github.com/acheronx0577
  */
+
+:root {
+    /* Container Settings */
+    --menu-max-height: 400px;
+    --menu-max-width: 450px;
+    --menu-border-radius: 6px;
+    --menu-padding: 4px;
+    --menu-spacing: 4px;
+    
+    /* Frosted Glass Background */
+    --glass-bg-color: rgba(26, 21, 21, 0.904);
+    --glass-blur: 12px;
+    --glass-saturation: 160%;
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --glass-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    
+    /* Item States */
+    --item-bg: rgba(255, 255, 255, 0.03);
+    --item-border-radius: 4px;
+    --item-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Hover State */
+    --hover-bg: rgba(255, 100, 100, 0.2);
+    --hover-border: 1px solid rgba(255, 150, 150, 0.3);
+    --hover-shadow: 0 2px 8px rgba(255, 50, 50, 0.15);
+    --hover-transform: translateX(2px);
+    --hover-brightness: 1.15;
+    
+    /* Selected/Active State */
+    --selected-bg: rgba(255, 80, 80, 0.3);
+    --selected-border-left: 3px solid rgba(255, 100, 100, 0.8);
+    --selected-shadow: inset 0 0 10px rgba(255, 50, 50, 0.2);
+    
+    /* Category Headers */
+    --category-bg: transparent;
+    
+    /* Scrollbar/Spacing */
+    --scrollbar-padding: 0 6px;
+}
 
 /* Make the entire autocomplete/slash command menu more compact with frosted glass */
 ._13533e3c5791980f-autocompleteInner._6b0e07cbaf13ec4e-autocompleteInner, 
 ._13533e3c5791980f-autocomplete.d1405bf11dcfb07a-outerWrapper {
-    max-height: 400px !important; /* Shrink max height */
-    max-width: 450px !important; /* Shrink width */
-    border-radius: 6px !important; /* Smaller corners */
-    padding: 4px !important; /* Less padding */
+    max-height: var(--menu-max-height) !important;
+    max-width: var(--menu-max-width) !important;
+    border-radius: var(--menu-border-radius) !important;
+    padding: var(--menu-padding) !important;
     
     /* Frosted glass effect */
-    background: rgba(26, 21, 21, 0.904) !important;
-    backdrop-filter: blur(12px) saturate(160%) !important;
-    -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.3),
-        0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+    background: var(--glass-bg-color) !important;
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation)) !important;
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation)) !important;
+    border: var(--glass-border) !important;
+    box-shadow: var(--glass-shadow) !important;
 }
 
-/* Just add 2px spacing between items */
+/* Just add spacing between items */
 ._13533e3c5791980f-autocompleteRowVertical {
-    margin: 4px 0 !important;
+    margin: var(--menu-spacing) 0 !important;
 }
 
 /* Make category headers transparent */
 ._14245bb948377a25-wrapper.d1405bf11dcfb07a-categoryHeader {
-    background: transparent !important;
+    background: var(--category-bg) !important;
     border: none !important;
     box-shadow: none !important;
 }
 
 /* Make header background transparent */
 ._14245bb948377a25-header {
-    background: transparent !important;
+    background: var(--category-bg) !important;
 }
 
 /* Smooth hover for items inside your red frosted glass */
 ._13533e3c5791980f-autocompleteRowVertical {
-    background: rgba(255, 255, 255, 0.03) !important;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    border-radius: 4px !important;
+    background: var(--item-bg) !important;
+    transition: var(--item-transition) !important;
+    border-radius: var(--item-border-radius) !important;
     border: 1px solid transparent !important;
 }
 
 ._13533e3c5791980f-autocompleteRowVertical:hover {
-    background: rgba(255, 100, 100, 0.2) !important; /* Red hover to match theme */
-    backdrop-filter: brightness(1.15) !important;
-    border: 1px solid rgba(255, 150, 150, 0.3) !important;
-    transform: translateX(2px) !important;
-    box-shadow: 0 2px 8px rgba(255, 50, 50, 0.15) !important;
+    background: var(--hover-bg) !important;
+    backdrop-filter: brightness(var(--hover-brightness)) !important;
+    border: var(--hover-border) !important;
+    transform: var(--hover-transform) !important;
+    box-shadow: var(--hover-shadow) !important;
 }
 
 /* Selected item - brighter red */
 ._13533e3c5791980f-autocompleteRowVertical[aria-selected="true"] {
-    background: rgba(255, 80, 80, 0.3) !important;
-    border-left: 3px solid rgba(255, 100, 100, 0.8) !important;
-    box-shadow: inset 0 0 10px rgba(255, 50, 50, 0.2) !important;
+    background: var(--selected-bg) !important;
+    border-left: var(--selected-border-left) !important;
+    box-shadow: var(--selected-shadow) !important;
 }
 
 ._6b0e07cbaf13ec4e-scroller {
-  padding: 0 6px 0 6px !important; /* Adjust as needed */
+    padding: var(--scrollbar-padding) !important;
 }
 
 /* Make the inner container transparent on hover */
 ._13533e3c5791980f-autocompleteRow:hover ._13533e3c5791980f-base {
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
-
