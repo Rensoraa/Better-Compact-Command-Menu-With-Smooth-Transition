@@ -7,209 +7,67 @@
  * @website https://github.com/acheronx0577
  */
 
-/* 🎨 Make category header background transparent */
-.categoryHeader_d1405b {
+
+/* Make the entire autocomplete/slash command menu more compact with frosted glass */
+._13533e3c5791980f-autocomplete.d1405bf11dcfb07a-outerWrapper {
+    max-height: 400px !important; /* Shrink max height */
+    max-width: 450px !important; /* Shrink width */
+    border-radius: 6px !important; /* Smaller corners */
+    padding: 4px !important; /* Less padding */
+    
+    /* Frosted glass effect */
+    background: rgba(26, 21, 21, 0.904) !important;
+    backdrop-filter: blur(12px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(160%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Smooth hover for items inside your red frosted glass */
+._13533e3c5791980f-autocompleteRowVertical {
+    background: rgba(255, 255, 255, 0.03) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 4px !important;
+    margin: 1px 0 !important;
+    border: 1px solid transparent !important;
+}
+
+._13533e3c5791980f-autocompleteRowVertical:hover {
+    background: rgba(255, 100, 100, 0.2) !important; /* Red hover to match theme */
+    backdrop-filter: brightness(1.15) !important;
+    border: 1px solid rgba(255, 150, 150, 0.3) !important;
+    transform: translateX(2px) !important;
+    box-shadow: 0 2px 8px rgba(255, 50, 50, 0.15) !important;
+}
+
+/* Selected item - brighter red */
+._13533e3c5791980f-autocompleteRowVertical[aria-selected="true"] {
+    background: rgba(255, 80, 80, 0.3) !important;
+    border-left: 3px solid rgba(255, 100, 100, 0.8) !important;
+    box-shadow: inset 0 0 10px rgba(255, 50, 50, 0.2) !important;
+}
+
+/* Make category headers transparent */
+._14245bb948377a25-wrapper.d1405bf11dcfb07a-categoryHeader {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Make header background transparent */
+._14245bb948377a25-header {
     background: transparent !important;
 }
 
-/* 🎨 Transparent hover effect for category header */
-.categoryHeader_d1405b:hover {
-    background: transparent !important;
+/* Optional: Make text stand out more */
+._14245bb948377a25-headerLabel {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 600 !important;
 }
 
-/* ✨ Main container sizing adjustments */
-.autocomplete__13533.outerWrapper_d1405b {
-  max-height: 310px !important;
-  width: 500px !important;
-  border-radius: 13px;
+/* Just add 2px spacing between items */
+._13533e3c5791980f-autocompleteRowVertical {
+    margin: 6px 0 !important;
 }
-
-/* 🖱️ Scrollable area positioning */
-.scroller_affa7e:not(.videoGrid_a21736) {
-top: 4px;
-right: 3px;
-display: block !important;
-visibility: visible !important;
-}
-
-/* 🌀 Animated item wrapper with cool effects */
-.itemWrapper_d1405b {
-  position: relative;
-  border-radius: 1px;
-  overflow: hidden;
-  -webkit-clip-path: inset(0 round 10px);
-  clip-path: inset(0 round 10px);
-  transform: translateZ(0);
-  transition: 
-    border-radius 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    background 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    transform 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    box-shadow 0.4s cubic-bezier(0.33, 1, 0.68, 1);
-}
-
-/* ✨ Pseudo-element for gradient effect */
-.itemWrapper_d1405b::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-clip-path: inset(0 round 1px);
-  clip-path: inset(0 round 1px);
-  transition: 
-    clip-path 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    background 0.4s cubic-bezier(0.33, 1, 0.68, 1);
-  z-index: -1;
-  background: transparent;
-  pointer-events: none;
-}
-
-/* 🌈 Hover effects for item wrapper */
-.itemWrapper_d1405b:hover {
-  border-radius: 10px;
-  transform: scale(0.98) translateZ(0);
-  box-shadow: 
-    inset 0 0 12px rgba(255, 255, 255, 0.25),
-    0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* 🌟 Gradient effect on hover */
-.itemWrapper_d1405b:hover::before {
-  -webkit-clip-path: inset(1px round 10px);
-  clip-path: inset(1px round 10px);
-  background: linear-gradient(
-    to right,
-    rgba(87, 45, 133, 0.8) 0%,
-    rgba(45, 52, 139, 1) 50%,
-    rgba(87, 45, 133, 0.8) 100%
-  );
-}
-
-/* ⚪ White text on hover */
-.itemWrapper_d1405b:hover .title__920ab,
-.itemWrapper_d1405b:hover .description__920ab,
-.itemWrapper_d1405b:hover .source__920ab {
-  color: white !important;
-}
-
-/* 🚫 Fix overflow issues */
-.autocompleteRowVertical__13533,
-.base__13533 {
-  overflow: visible !important;
-
-}
-
-/* 🌈 Dark semi-transparent background for stacked bars */
-.stackedBars__74017 {
-    background-color: rgba(9, 13, 15, 0.345) !important;
-}
-
-/* 🎨 Same background for option pills */
-.optionPillKey__1464f {
-    background-color: rgba(9, 13, 15, 0.345) !important;
-}
-
-/* 🏷️ Semi-transparent header background with compact styling */
-.contentTitle__13533 {
-    background: rgba(11, 6, 29, 0.334) !important;
-    padding: 4px 8px !important;
-    border-radius: 7px !important;
-    display: inline-block !important; /* Prevents full-width background */
-    margin-left: 8px !important; /* ↔️ Adds left spacing */
-}
-
-/* ✨ Force white text for default color classes (improves readability) */
-.defaultColor__4bd52, .defaultColor__5345c {
-    color: rgba(255, 255, 255, 0.885) !important;
-}
-
-/* 🎪 Autocomplete Container */
-.autocomplete__13533.autocomplete__6b0e0 {
-  max-height: 310px !important;
-  width: 500px !important;
-  border-radius: 13px;
-}
-
-/* 🖱️ Clickable Row (Base) */
-.clickable__13533.autocompleteRowVertical__13533 {
-  position: relative;
-  border-radius: 6px;
-  overflow: hidden;
-  -webkit-clip-path: inset(0 7px 0 7px round 9px);
-  clip-path: inset(0 7px 0 7px round 9px);
-  transform: translateZ(0);
-  transition: 
-    border-radius 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    background 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    transform 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    box-shadow 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    clip-path 0.4s cubic-bezier(0.33, 1, 0.68, 1);
-}
-
-/* 📦 Inner Wrapper */
-.wrapper__920ab {
-  padding: 1px 8px !important;
-}
-
-/* ✨ Gradient Overlay (Pseudo-element) */
-.clickable__13533.autocompleteRowVertical__13533::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  clip-path: inset(0 round 1px);
-  transition: 
-    clip-path 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    background 0.4s cubic-bezier(0.33, 1, 0.68, 1);
-  z-index: -1;
-  background: transparent;
-  pointer-events: none;
-}
-
-/* 🌈 Hover Effects */
-.clickable__13533.autocompleteRowVertical__13533:hover {
-  border-radius: 10px;
-  transform: scale(0.98) translateZ(0);
-  box-shadow: 
-    inset 0 0 12px rgba(255, 255, 255, 0.25),
-    0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* 🌟 Gradient on Hover */
-.clickable__13533.autocompleteRowVertical__13533:hover::before {
-  clip-path: inset(1px round 10px);
-  background: linear-gradient(
-    to right,
-    rgba(87, 45, 133, 0.8) 0%,
-    rgba(45, 52, 139, 1) 50%,
-    rgba(87, 45, 133, 0.8) 100%
-  );
-}
-
-/* ⚪ White Text on Hover/Selection */
-.clickable__13533.autocompleteRowVertical__13533:hover .title__920ab,
-.clickable__13533.autocompleteRowVertical__13533:hover .description__920ab,
-.clickable__13533.autocompleteRowVertical__13533:hover .source__920ab,
-.clickable__13533.autocompleteRowVertical__13533[aria-selected="true"] .title__920ab,
-.clickable__13533.autocompleteRowVertical__13533[aria-selected="true"] .description__920ab,
-.clickable__13533.autocompleteRowVertical__13533[aria-selected="true"] .source__920ab {
-  color: white !important;
-}
-
-/* 🎯 Selected State */
-.clickable__13533.autocompleteRowVertical__13533[aria-selected="true"] {
-  border-radius: 10px;
-  transform: scale(0.98) translateZ(0);
-}
-
-.clickable__13533.autocompleteRowVertical__13533[aria-selected="true"]::before {
-  clip-path: inset(1px round 10px);
-  background: linear-gradient(
-    to right,
-    rgba(87, 45, 133, 0.8) 0%,
-    rgba(45, 52, 139, 1) 50%,
-    rgba(87, 45, 133, 0.8) 100%
-  );
-}
-
-
