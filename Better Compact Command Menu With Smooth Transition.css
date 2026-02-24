@@ -49,8 +49,8 @@
 }
 
 /* Make the entire autocomplete/slash command menu more compact with frosted glass */
-._13533e3c5791980f-autocompleteInner._6b0e07cbaf13ec4e-autocompleteInner, 
-._13533e3c5791980f-autocomplete.d1405bf11dcfb07a-outerWrapper {
+.autocompleteInner__13533.autocompleteInner__6b0e0, 
+.autocomplete__13533.outerWrapper_d1405b {
     max-height: var(--menu-max-height) !important;
     max-width: var(--menu-max-width) !important;
     border-radius: var(--menu-border-radius) !important;
@@ -65,31 +65,31 @@
 }
 
 /* Just add spacing between items */
-._13533e3c5791980f-autocompleteRowVertical {
+.autocompleteRowVertical__13533 {
     margin: var(--menu-spacing) 0 !important;
 }
 
 /* Make category headers transparent */
-._14245bb948377a25-wrapper.d1405bf11dcfb07a-categoryHeader {
+.wrapper__14245.categoryHeader_d1405b {
     background: var(--category-bg) !important;
     border: none !important;
     box-shadow: none !important;
 }
 
 /* Make header background transparent */
-._14245bb948377a25-header {
+.header__14245 {
     background: var(--category-bg) !important;
 }
 
 /* Smooth hover for items inside your red frosted glass */
-._13533e3c5791980f-autocompleteRowVertical {
+.autocompleteRowVertical__13533 {
     background: var(--item-bg) !important;
     transition: var(--item-transition) !important;
     border-radius: var(--item-border-radius) !important;
     border: 1px solid transparent !important;
 }
 
-._13533e3c5791980f-autocompleteRowVertical:hover {
+.autocompleteRowVertical__13533:hover {
     background: var(--hover-bg) !important;
     backdrop-filter: brightness(var(--hover-brightness)) !important;
     border: var(--hover-border) !important;
@@ -98,22 +98,22 @@
 }
 
 /* Selected item - brighter red */
-._13533e3c5791980f-autocompleteRowVertical[aria-selected="true"] {
+.autocompleteRowVertical__13533[aria-selected="true"] {
     background: var(--selected-bg) !important;
     border-left: var(--selected-border-left) !important;
     box-shadow: var(--selected-shadow) !important;
 }
 
-._6b0e07cbaf13ec4e-scroller {
+.scroller__6b0e0 {
     padding: var(--scrollbar-padding) !important;
 }
 
 /* Make the inner container transparent on hover */
-._13533e3c5791980f-autocompleteRow:hover ._13533e3c5791980f-base {
+.autocompleteRow__13533:hover .base__13533 {
     background-color: transparent !important;
 }
 
-._13533e3c5791980f-autocomplete._6b0e07cbaf13ec4e-autocomplete._6b0e07cbaf13ec4e-autocompleteAttached {
+.autocomplete__13533.autocomplete__6b0e0.autocompleteAttached__6b0e0 {
     max-height: var(--menu-max-height) !important;
     max-width: var(--menu-max-width) !important;
 }
